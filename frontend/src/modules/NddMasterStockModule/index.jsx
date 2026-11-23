@@ -19,10 +19,15 @@ export default function NddMasterStockModule({ defaultTab = 'warehouse-stock' })
   const [products, setProducts] = useState([]);
   const [suppliers, setSuppliers] = useState([]);
   const [stockBalances, setStockBalances] = useState([]);
+  const [activeTab, setActiveTab] = useState(defaultTab);
 
   const [loading, setLoading] = useState(true);
   const [isFallbackMode, setIsFallbackMode] = useState(false);
   const [errorDetails, setErrorDetails] = useState([]);
+
+  useEffect(() => {
+    setActiveTab(defaultTab);
+  }, [defaultTab]);
 
   const loadMasterAndStockData = useCallback(async () => {
     setLoading(true);
@@ -154,7 +159,11 @@ export default function NddMasterStockModule({ defaultTab = 'warehouse-stock' })
           <Spin size="large" tip="Memuat data gudang, produk, pemasok, dan saldo stok..." />
         </div>
       ) : (
-        <Tabs defaultActiveKey={defaultTab} items={items} />
+        <Tabs
+          activeKey={activeTab}
+          onChange={(key) => setActiveTab(key)}
+          items={items}
+        />
       )}
     </Space>
   );

@@ -1,3 +1,4 @@
+require('dns').setServers(['8.8.8.8', '1.1.1.1']);
 require('module-alias/register');
 const mongoose = require('mongoose');
 const { globSync } = require('glob');
