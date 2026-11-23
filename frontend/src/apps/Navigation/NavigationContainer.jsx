@@ -26,6 +26,8 @@ import {
   FilterOutlined,
   WalletOutlined,
   ReconciliationOutlined,
+  DatabaseOutlined,
+  AppstoreOutlined,
 } from '@ant-design/icons';
 
 const { Sider } = Layout;
@@ -58,6 +60,16 @@ function Sidebar({ collapsible, isMobile = false }) {
       key: 'customer',
       icon: <CustomerServiceOutlined />,
       label: <Link to={'/customer'}>{translate('customers')}</Link>,
+    },
+    {
+      key: 'ndd/warehouse-stock',
+      icon: <DatabaseOutlined />,
+      label: <Link to={'/ndd/warehouse-stock'}>Gudang & Saldo Stok</Link>,
+    },
+    {
+      key: 'ndd/master-data',
+      icon: <AppstoreOutlined />,
+      label: <Link to={'/ndd/master-data'}>Produk & Pemasok</Link>,
     },
 
     {

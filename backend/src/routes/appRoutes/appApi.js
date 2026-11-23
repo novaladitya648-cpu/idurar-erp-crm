@@ -30,4 +30,7 @@ routesList.forEach(({ entity, controllerName }) => {
   routerApp(entity, controller);
 });
 
+const stockController = require('@/controllers/appControllers/stockController');
+router.route('/stock/movement').post(catchErrors(stockController.recordMovement));
+
 module.exports = router;

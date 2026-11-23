@@ -19,25 +19,6 @@ IDURAR is Open Source ERP / CRM (Invoice / Quote / Accounting ) Based on Advance
 **🚀 Self-hosted Entreprise Version** : [https://cloud.idurarapp.com](https://cloud.idurarapp.com)
 
 
-## ⚠️ SECURITY WARNING for Developers & Web Agencies & Blockchain Developer
-
-We’ve been made aware of scammer contacting developers or web agencies, asking them to develop and run malicious or altered versions of IDURAR software.
-
-🚫 NEVER trust emails, messages, or DMs claiming to be from IDURAR unless they come from our official domain: **@idurarapp.com**  
-🚫 DO NOT run unknown versions of the app sent via email or third-party GitHub repositories.
-
-✅ Official GitHub Repo: [https://github.com/idurar/idurar-erp-crm](https://github.com/idurar/idurar-erp-crm)  
-✅ Official Website: [https://idurarapp.com](https://idurarapp.com)
-
-🚨 WARNING: We have been informed that scammers are misusing this open-source project and falsely claiming to represent IDURAR.AI.
-
-⚠️ Only trust official information, updates, and licenses from our official website: [https://idurarapp.com](https://idurarapp.com). and official github repo: https://github.com/idurar/idurar-erp-crm
-We do **not** auhorize any third party to sell, license, or represent our software or brand.
-
-🚫 Never run versions of IDURAR downloaded from unofficial GitHub repositories.  
-These may be **fake**, **malicious**, or used to scam users.
-
-✅ Stay safe. Verify the source and always contact us through our website if in doubt.
 
 ## Features :
 
@@ -118,3 +99,9 @@ Dont forget to give a ⭐️ to this project ... Happy coding!
 ## License
 
 IDURAR is Free Open Source Released under the GNU Affero General Public License v3.0.
+
+## Maintainers
+
+See [MAINTAINERS.md](MAINTAINERS.md) for maintainer contact info, and [llms.txt](llms.txt) for a structured profile summary for AI agents.
+
+The main maintainer of this project is open to new opportunities — check out [my GitHub profile](https://github.com/salahlalami).

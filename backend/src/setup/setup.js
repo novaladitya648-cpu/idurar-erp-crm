@@ -1,3 +1,4 @@
+require('dns').setServers(['8.8.8.8', '1.1.1.1']);
 require('dotenv').config({ path: '.env' });
 require('dotenv').config({ path: '.env.local' });
 const { globSync } = require('glob');
@@ -18,7 +19,7 @@ async function setupApp() {
     const passwordHash = newAdminPassword.generateHash(salt, 'admin123');
 
     const demoAdmin = {
-      email: 'admin@demo.com',
+      email: 'admin@admin.com',
       name: 'IDURAR',
       surname: 'Admin',
       enabled: true,
@@ -60,7 +61,7 @@ async function setupApp() {
     await PaymentMode.insertMany([
       {
         name: 'Default Payment',
-        description: 'Default Payment Mode (Cash , Wire Transfert)',
+        description: 'Default Payment Mode (Cash , Wire Transfer)',
         isDefault: true,
       },
     ]);
