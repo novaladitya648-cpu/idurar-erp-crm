@@ -43,7 +43,11 @@ function Sidebar({ collapsible, isMobile = false }) {
   const { isNavMenuClose } = stateApp;
   const { navMenu } = appContextAction;
   const [showLogoApp, setLogoApp] = useState(isNavMenuClose);
-  const [currentPath, setCurrentPath] = useState(location.pathname.slice(1));
+  const [currentPath, setCurrentPath] = useState(
+  location.pathname === '/stock/movement'
+    ? 'stock/movement'
+    : location.pathname.slice(1)
+  );
 
   const translate = useLanguage();
   const navigate = useNavigate();
@@ -64,6 +68,11 @@ function Sidebar({ collapsible, isMobile = false }) {
       key: 'invoice',
       icon: <ContainerOutlined />,
       label: <Link to={'/invoice'}>{translate('invoices')}</Link>,
+    },
+    {
+      key: 'stock/movement',
+      icon: <ReconciliationOutlined />,
+      label: <Link to={'/stock/movement'}>Stock Movement</Link>,
     },
     {
       key: 'quote',
@@ -99,13 +108,14 @@ function Sidebar({ collapsible, isMobile = false }) {
   ];
 
   useEffect(() => {
-    if (location)
-      if (currentPath !== location.pathname) {
-        if (location.pathname === '/') {
-          setCurrentPath('dashboard');
-        } else setCurrentPath(location.pathname.slice(1));
-      }
-  }, [location, currentPath]);
+  if (location) {
+    if (location.pathname === '/') {
+      setCurrentPath('dashboard');
+    } else {
+      setCurrentPath(location.pathname.slice(1));
+    }
+  }
+  }, [location]);
 
   useEffect(() => {
     if (isNavMenuClose) {

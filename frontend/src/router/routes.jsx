@@ -25,6 +25,8 @@ const Profile = lazy(() => import('@/pages/Profile'));
 
 const About = lazy(() => import('@/pages/About'));
 
+const StockMovement = lazy(() => import('@/pages/StockMovement'));
+
 let routes = {
   expense: [],
   default: [
@@ -120,9 +122,14 @@ let routes = {
       element: <Profile />,
     },
     {
+      path: '/stock/movement',
+      element: <StockMovement />,
+    },
+    {
       path: '*',
       element: <NotFound />,
     },
+
   ],
 };
 
